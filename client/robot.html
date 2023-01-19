@@ -24,37 +24,27 @@
             -webkit-text-stroke: 8px #1f2024;
             color: white;
         }
-
-        @media all and (min-width: 768px) and (max-width: 1024px) {
-            -webkit-text-stroke: 4px;
-            color: white;
-
-        }
-
-        @media all and (min-width: 480px) and (max-width: 768px) {
-            -webkit-text-stroke: 2px;
-        }
     </style>
+    <link rel="stylesheet" href="robostyle.css" />
 </head>
 
 <body>
+
+
     <section id="mint" class="mint-section wf-section">
         <div class="minting-container w-container"><img
                 src="https://uploads-ssl.webflow.com/63c8007475f8071ab6377d9d/63c8007575f807d399377dc5_single-bot%402x.png"
                 loading="lazy" width="240" alt="" class="mint-card-image" />
-            <h2>Robocoach Career HELP</h2>
+            <h2>Robocoach Career Help</h2>
             <p class="paragraph">Stuck in a job you don&#x27;t like? Just tell Robocoach about your
                 <strong>interests</strong> and<strong> goals.</strong>
             </p>
-            /* form entry */
             <div class="w-embed">
                 <form>
-                    <textarea name="prompt" rows="5" cols="33" placeholder="My interests are..."></textarea>
+                    <textarea name="prompt" rows="2"></textarea>
                     <button type="submit" class="primary-button w-button">Get job suggestions</button>
                 </form>
-                /* chat container */
                 <div class="chat_container">
-                    chat container
                 </div>
             </div>
 
@@ -76,7 +66,7 @@
     <script src="https://uploads-ssl.webflow.com/63c8007475f8071ab6377d9d/js/webflow.e720a7d5d.js"
         type="text/javascript"></script>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-    <script src="robot.js" type="text/javascript"></script>
+    <script type="module" src="robot.js"></script>
 </body>
 
 </html>
