@@ -1,9 +1,7 @@
-import bot from './assets/bot.svg'
-import user from './assets/user.svg'
-import robot from './assets/robot.png'
-
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('.chat_container')
+
+const botImageUrl = 'https://res.cloudinary.com/dz6cjgpve/image/upload/v1674206830/robochat_fsnses.png'
 
 let loadInterval
 
@@ -54,8 +52,8 @@ function chatStripe(isAi, value, uniqueId) {
             <div class="chat">
                 <div class="profile">
                     <img 
-                      src=${isAi ? robot : user} 
-                      alt="${isAi ? 'bot' : 'user'}" 
+                      src=${botImageUrl} 
+                      alt="${'bot'}" 
                     />
                 </div>
                 <div class="message" id=${uniqueId}>${value}</div>
