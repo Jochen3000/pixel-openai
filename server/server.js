@@ -3,6 +3,8 @@ import * as dotenv from 'dotenv'
 import cors from 'cors'
 import { Configuration, OpenAIApi } from 'openai'
 
+
+
 dotenv.config()
 
 const configuration = new Configuration({
@@ -12,7 +14,16 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express()
-app.use(cors())
+
+// cors
+const corsUrl = process.env.CORS_URL1_KEY;
+console.log(corsUrl);
+const corsOptions = {
+  origin: [process.env.CORS_URL1_KEY, process.env.CORS_URL1_KEY],
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
+
 app.use(express.json())
 
 app.get('/', async (req, res) => {
