@@ -19,7 +19,7 @@ const app = express()
 const corsUrl = process.env.CORS_URL1_KEY;
 console.log(corsUrl);
 const corsOptions = {
-  origin: [process.env.CORS_URL1_KEY, process.env.CORS_URL1_KEY],
+  origin: [process.env.CORS_URL1_KEY, process.env.CORS_URL2_KEY],
   optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions))
